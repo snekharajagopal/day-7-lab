@@ -41,76 +41,125 @@
 //   console.log(`GST: Rs. ${gst.toFixed(2)}`);
 //   console.log(`Payable: Rs. ${totalBill.toFixed(2)}`);
 // }
-console.log("step 5");
-const marks = Number(prompt("Enter marks from 0 to 100:"));
+// console.log("step 5");
+// const marks = Number(prompt("Enter marks from 0 to 100:"));
 
-if (Number.isNaN(marks) || marks < 0 || marks > 100) {
-  alert("Enter valid marks between 0 and 100.");
-} 
-else {
-  let grade;
+// if (Number.isNaN(marks) || marks < 0 || marks > 100) {
+//   alert("Enter valid marks between 0 and 100.");
+// } 
+// else {
+//   let grade;
 
-  if (marks >= 90) {
-    grade = "A+";
-  } else if (marks >= 75) {
-    grade = "A";
-  } else if (marks >= 60) {
-    grade = "B";
-  } else if (marks >= 40) {
-    grade = "C";
-  } else {
-    grade = "Fail";
-  }
+//   if (marks >= 90) {
+//     grade = "A+";
+//   } else if (marks >= 75) {
+//     grade = "A";
+//   } else if (marks >= 60) {
+//     grade = "B";
+//   } else if (marks >= 40) {
+//     grade = "C";
+//   } else {
+//     grade = "Fail";
+//   }
 
-  console.log(`Grade: ${grade}`);
+//   console.log(`Grade: ${grade}`);
 
-  switch (grade) {
-    case "A+":
-      console.log("Outstanding");
-      break;
-    case "A":
-      console.log("Excellent");
-      break;
-    case "B":
-      console.log("Good");
-      break;
-    case "C":
-      console.log("Needs improvement");
-      break;
-    default:
-      console.log("Try again");
-  }
-}
-console.log("step-6 -loops");
-const n = Number(prompt("Enter a positive whole number:"));
+//   switch (grade) {
+//     case "A+":
+//       console.log("Outstanding");
+//       break;
+//     case "A":
+//       console.log("Excellent");
+//       break;
+//     case "B":
+//       console.log("Good");
+//       break;
+//     case "C":
+//       console.log("Needs improvement");
+//       break;
+//     default:
+//       console.log("Try again");
+//   }
+// }
+// console.log("step-6 -loops");
+// const n = Number(prompt("Enter a positive whole number:"));
 
-if (!Number.isInteger(n) || n <= 0) {
-  console.log("Enter a positive whole number.");
-}
- else {
-  console.log("Multiplication table");
+// if (!Number.isInteger(n) || n <= 0) {
+//   console.log("Enter a positive whole number.");
+// }
+//  else {
+//   console.log("Multiplication table");
 
-  for (let i = 1; i <= 10; i++) {
-    console.log(`${n} x ${i} = ${n * i}`);
-  }
+//   for (let i = 1; i <= 10; i++) {
+//     console.log(`${n} x ${i} = ${n * i}`);
+//   }
 
-  console.log("Sum from 1 to n");
+//   console.log("Sum from 1 to n");
 
-  let count = 1;
-  let sum = 0;
+//   let count = 1;
+//   let sum = 0;
 
-  while (count <= n) {
-    sum += count;
-    count++;
-  }
+//   while (count <= n) {
+//     sum += count;
+//     count++;
+//   }
 
-  console.log(`Sum = ${sum}`);
+//   console.log(`Sum = ${sum}`);
 
-  console.log("Even numbers");
+//   console.log("Even numbers");
 
-  for (let i =1;i<=n;i++) {
-    if(i%2===0)
+//   for (let i =1;i<=n;i++) {
+//     if(i%2===0)
     
+//     console.log(i);
+//   }
+// }
+console.log("step 7 pattern");
+console.log("Star Triangle");
+let n = 5;
+for (let i = 0; i < n; i++) {
+  let line = "";
+  for (let j = 1; j <= i + 1; j++) {
+    line += "*";
+  }
+  console.log(line);
+}
+console.log("Number Triangle");
+
+for (let i = 1; i <= n; i++) {
+  let line = "";
+  for (let j = 1; j <= i; j++) {
+    line += j;
+  }
+  console.log(line);
+}
+console.log("step 8 fizzbuzz and primes");
+console.log("Printing FizzBuzz");
+for (let i = 1; i <= 30; i++) {
+  if (i % 15 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
     console.log(i);
   }
+}
+console.log("Prime Numbers from 2 to 50");
+for (let num=2; num<=50;num++){
+    let isPrime=true;
+    for(let i=2; i<num;i++){
+        if(num%i===0){
+            isPrime=false;
+            break;
+        }
+       
+    }
+    if(isPrime){
+         console.log(num);
+
+    }
+   
+
 }
